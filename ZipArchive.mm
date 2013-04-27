@@ -206,7 +206,7 @@
 		if( unzGetGlobalInfo(_unzFile, &globalInfo )==UNZ_OK )
 		{
             _numFiles = globalInfo.number_entry;
-//			NSLog(@"%lu entries in the zip file", globalInfo.number_entry);
+//			DLog(@"%lu entries in the zip file", globalInfo.number_entry);
 		}
 	}
 	return _unzFile!=NULL;
@@ -339,8 +339,8 @@
 				//	[attr  setValue:orgDate forKey:NSFileCreationDate];
 					if( ![[NSFileManager defaultManager] setAttributes:attr ofItemAtPath:fullPath error:nil] )
 					{
-						// cann't set attributes 
-						NSLog(@"Failed to set attributes");
+						// can't set attributes 
+						DLog(@"Failed to set attributes");
 					}
 					
 				}
